@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "nodemon ./bin/www",
     "deploy:prod": "./deploy.sh"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "express-handlebars": "^3.0.2",
     "forever": "^1.0.0",
     "forever-monitor": "^1.7.1",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "nodemon": "^2.0.2"
   }
 }
