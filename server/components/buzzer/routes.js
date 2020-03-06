@@ -4,7 +4,10 @@ var hardware = require('./hardware');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.json(hardware.get());
+  // res.json(hardware.get());
+
+  //res.sendFile(__dirname + '/display.html');
+  res.send('test');
 });
 
 /* Register Route

@@ -1,15 +1,14 @@
 var express = require('express');
 var router = express.Router();
 var hardware = require('./hardware');
-var fs = require('fs');
-//var html = require('./display.html');
+const fs = require('fs');
 
 /* GET home page. */
 
 router.get('/', function(req, res, next) {
   // res.json(hardware.get());
 
-  res.sendFile(__dirname + '/display.html');
+  res.send(fs.readFileSync(__dirname + '/display.html').toString());
 });
 
 /* Register Route
