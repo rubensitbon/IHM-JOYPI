@@ -37,13 +37,13 @@ router.post('/add', async (req, res) => {
   console.log('req.body.eventName', req.body.eventName);
   console.log('req.body.IF', req.body.IF);
   console.log('req.body.THEN', req.body.THEN);
-  const { IF, THEN } = req.body;
+  const { eventName, IF, THEN } = req.body;
   const value = fetchValue(IF);
   console.log('VALUE', value);
 
   console.log('BEFORE ADD EVENT');
 
-  eventEmitter.on('event', function(a, b) {
+  eventEmitter.on(`event${eventName}`, function(a, b) {
     console.log(a, b, this, this === eventEmitter);
   });
   console.log('AFTER ADD EVENT');
