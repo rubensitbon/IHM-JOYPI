@@ -7,15 +7,19 @@ function App() {
   const [subData, setSubData] = useState([]);
   useEffect(() => {
     fetchData();
-  });
+  }, []);
 
   const fetchSubData = async subDataId => {
     const result = await axios(`http://localhost:9000/api/${subDataId}`);
-    console.log('result in fetchSubData', result);
-    console.log('result.data in fetchSubData', result.data);
-    console.log('result.data in fetchSubData', result.data.toString());
+    console.log('result in fetchSubData', result, 'of subDataId', subDataId);
+    console.log(
+      'result.data in fetchSubData',
+      result.data.toString(),
+      'of subDataId',
+      subDataId
+    );
     console.log('subData in fetchSubData', subData);
-    setSubData([...subData, result.data]);
+    setSubData(prevState => [...prevState, result.data]);
   };
 
   const fetchData = async () => {
@@ -31,7 +35,12 @@ function App() {
         <h1>JoyPi IHM - Centrale Lille</h1>
       </header>
       <div className="App-body">
-        {data && data.map(item => <div>{item}</div>)}
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
+          List of all available Components :
+          {data &&
+            data.map(item => <div style={{ marginRight: '10px' }}>{item}</div>)}
+        </div>
+
         {subData &&
           subData.map(item => (
             <div dangerouslySetInnerHTML={{ __html: item }}></div>

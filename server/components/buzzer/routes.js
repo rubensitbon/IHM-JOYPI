@@ -1,16 +1,17 @@
 var express = require('express');
 var router = express.Router();
 var hardware = require('./hardware');
+const fs = require('fs');
 
-/* GET home page. */
+/* GET route that returns the HTML FILE */
+
 router.get('/', function(req, res, next) {
   // res.json(hardware.get());
 
-  //res.sendFile(__dirname + '/display.html');
-  res.send('test');
+  res.send(fs.readFileSync(__dirname + '/display.html').toString());
 });
 
-/* Register Route
+/* POST Route
 ========================================================= */
 router.post('/', async (req, res) => {
   res.json(hardware.post());
