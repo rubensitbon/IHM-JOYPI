@@ -19,6 +19,7 @@ router.get('/', function(req, res, next) {
 ========================================================= */
 router.post('/', async (req, res) => {
   const { ligne1, ligne2 } = req.body;
+
   res.json(hardware.post(ligne1, ligne2));
 });
 

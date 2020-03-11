@@ -19,6 +19,7 @@
     "forever-monitor": "^1.7.1",
     "lowdb": "^1.0.0",
     "moment": "^2.24.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "python-shell": "^1.0.8"
   }
 }
