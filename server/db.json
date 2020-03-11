@@ -1,0 +1,30 @@
+{
+  "posts": [
+    {
+      "IF": {
+        "name": "led",
+        "label": "status",
+        "value": "true"
+      },
+      "THEN": {
+        "name": "buzzer",
+        "label": "sound",
+        "value": "true"
+      },
+      "id": "1583922041461"
+    },
+    {
+      "IF": {
+        "name": "led",
+        "label": "status",
+        "value": "true"
+      },
+      "THEN": {
+        "name": "buzzer",
+        "label": "sound",
+        "value": "true"
+      },
+      "id": "1583924030238"
+    }
+  ]
+}

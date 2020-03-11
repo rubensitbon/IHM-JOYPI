@@ -6,31 +6,6 @@ class MyEmitter extends EventEmitter {}
 
 const eventEmitter = new MyEmitter();
 
-/* Event Model
-========================================================= 
-JSON 
-{
-    "eventName": "IFFT1",
-    "IF": {
-        "componentId": "ultrasoundSensor",
-        "value": 1
-    },
-    "THEN": [
-        {
-            "componentId": "LED1",
-            "value": 1
-        },
-        {
-            "componentId": "SCREEN",
-            "value": "Ça touche"
-        }
-    ]
-}
-
-
-========================================================= 
-*/
-
 /* add an Event
 ========================================================= */
 router.post('/add', async (req, res) => {
@@ -43,7 +18,7 @@ router.post('/add', async (req, res) => {
 
   console.log('BEFORE ADD EVENT');
 
-  eventEmitter.on(`event${eventName}`, function(a, b) {
+  eventEmitter.on(`event`, function(a, b) {
     console.log(a, b, this, this === eventEmitter);
   });
   console.log('AFTER ADD EVENT');
