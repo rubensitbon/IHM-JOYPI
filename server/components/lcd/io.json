@@ -1,0 +1,8 @@
+{
+  "name": "lcd",
+  "route": "/api/lcd/",
+  "gpioNeeded": true,
+  "in": [{ "label": "ligne1", "type": "string", "method": "POST" },
+  	{ "label": "ligne2", "type": "string", "method": "POST" }],
+  "out": []
+}
