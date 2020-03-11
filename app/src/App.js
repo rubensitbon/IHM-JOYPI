@@ -10,7 +10,9 @@ function App() {
   }, []);
 
   const fetchDisplayData = async displayDataId => {
-    const result = await axios(`http://localhost:9000/api/${displayDataId}`);
+    const result = await axios(
+      `http://localhost:9000/api/${displayDataId}/display`
+    );
     console.log(
       'result in fetchdisplayData',
       result,
