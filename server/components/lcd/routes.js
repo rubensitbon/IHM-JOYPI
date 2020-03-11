@@ -18,8 +18,8 @@ router.get('/', function(req, res, next) {
 /* POST Route
 ========================================================= */
 router.post('/', async (req, res) => {
-	const {ligne1, ligne2} = req.body
-	res.json(hardware.post(ligne1,ligne2));
+  const { ligne1, ligne2 } = req.body;
+  res.json(hardware.post(ligne1, ligne2));
 });
 
 module.exports = router;
