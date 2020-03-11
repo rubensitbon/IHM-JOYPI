@@ -1,0 +1,7 @@
+{
+  "name": "buzzer",
+  "route": "/route/to/api/buzzers/",
+  "gpioNeeded": true,
+  "in": [{ "label": "state", "type": "boolean", "method": "POST" }],
+  "out": [{ "label": "state", "type": "boolean", "method": "GET" }]
+}

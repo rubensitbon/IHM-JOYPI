@@ -1,6 +1,6 @@
 {
   "name": "led",
-  "route": "/route/to/api/leds/",
+  "route": "/api/leds/",
   "gpioNeeded": true,
   "in": [{ "label": "state", "type": "boolean", "method": "POST" }],
   "out": [{ "label": "state", "type": "boolean", "method": "GET" }]

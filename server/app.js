@@ -24,6 +24,7 @@ app.engine('html', require('ejs').renderFile);
 app.use('/api/', indexRouter);
 app.use('/api/event', eventRouter);
 
+// TODO ADD DOCUMENTATION
 const getDirectories = source =>
   readdirSync(source, { withFileTypes: true })
     .filter(dirent => dirent.isDirectory())

@@ -4,29 +4,34 @@ import axios from 'axios';
 
 function App() {
   const [data, setData] = useState();
-  const [subData, setSubData] = useState([]);
+  const [displayData, setDisplayData] = useState([]);
   useEffect(() => {
     fetchData();
   }, []);
 
-  const fetchSubData = async subDataId => {
-    const result = await axios(`http://localhost:9000/api/${subDataId}`);
-    console.log('result in fetchSubData', result, 'of subDataId', subDataId);
+  const fetchDisplayData = async displayDataId => {
+    const result = await axios(`http://localhost:9000/api/${displayDataId}`);
     console.log(
-      'result.data in fetchSubData',
-      result.data.toString(),
-      'of subDataId',
-      subDataId
+      'result in fetchdisplayData',
+      result,
+      'of displayDataId',
+      displayDataId
     );
-    console.log('subData in fetchSubData', subData);
-    setSubData(prevState => [...prevState, result.data]);
+    console.log(
+      'result.data in fetchdisplayData',
+      result.data.toString(),
+      'of displayDataId',
+      displayDataId
+    );
+    console.log('displayData in fetchdisplayData', displayData);
+    setDisplayData(prevState => [...prevState, result.data]);
   };
 
   const fetchData = async () => {
     const result = await axios('http://localhost:9000/api');
     setData(result.data);
     console.log('result.data', result.data);
-    result.data.forEach(item => fetchSubData(item));
+    result.data.forEach(item => fetchDisplayData(item));
   };
 
   return (
@@ -41,8 +46,8 @@ function App() {
             data.map(item => <div style={{ marginRight: '10px' }}>{item}</div>)}
         </div>
 
-        {subData &&
-          subData.map(item => (
+        {displayData &&
+          displayData.map(item => (
             <div dangerouslySetInnerHTML={{ __html: item }}></div>
           ))}
       </div>

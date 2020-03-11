@@ -5,10 +5,14 @@ const fs = require('fs');
 
 /* GET route that returns the HTML FILE */
 
-router.get('/', function(req, res, next) {
+router.get('/display', function(req, res, next) {
   // res.json(hardware.get());
 
   res.send(fs.readFileSync(__dirname + '/display.html').toString());
+});
+
+router.get('/', function(req, res, next) {
+  res.json(hardware.get());
 });
 
 /* POST Route
