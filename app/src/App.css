@@ -23,3 +23,17 @@
   color: black;
   padding: 20px;
 }
+
+.App-links {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.App-link {
+  padding: 20px;
+  color: darkblue;
+  text-decoration: none;
+}
