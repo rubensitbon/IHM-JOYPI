@@ -25,6 +25,19 @@
         "value": "true"
       },
       "id": "1583924030238"
+    },
+    {
+      "IF": {
+        "name": "led",
+        "label": "state",
+        "value": "on"
+      },
+      "THEN": {
+        "name": "buzzer",
+        "label": "sound",
+        "value": "true"
+      },
+      "id": "1584046473959"
     }
   ]
 }

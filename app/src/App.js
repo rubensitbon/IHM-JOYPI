@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import axios from 'axios';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
+import './App.css';
 import IFTTT from './pages/IFTTT';
 import Home from './pages/Home';
 

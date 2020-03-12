@@ -6,3 +6,54 @@
   color: black;
   padding: 20px;
 }
+
+.IFTTT-header {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  margin: 20px;
+}
+
+.IFTTT-body {
+  display: flex;
+  flex: 1;
+}
+
+.IFTTT-condition {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  border: solid darkblue 1px;
+  margin: 10px 30px 10px 30px;
+  padding: 10px;
+}
+
+.IFTTT-input {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.IFTTT-submit {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8; /*Button Color*/
+  color: #fff;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  width: 100px;
+  margin: 30px;
+  align-self: flex-end;
+}
+.IFTTT-submit:active {
+  /*on Click*/
+  -ms-transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px); /*Move down*/
+  border-bottom: none; /*disappears*/
+}
