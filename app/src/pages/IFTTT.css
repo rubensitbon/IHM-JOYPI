@@ -20,11 +20,13 @@
 .IFTTT-body {
   display: flex;
   flex: 1;
+  justify-content: space-around;
 }
 
 .IFTTT-condition {
   display: flex;
   flex: 1;
+  max-width: 500px;
   flex-direction: column;
   border: solid darkblue 1px;
   margin: 10px 30px 10px 30px;
@@ -34,6 +36,7 @@
 .IFTTT-input {
   display: flex;
   flex: 1;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 5px;
 }
