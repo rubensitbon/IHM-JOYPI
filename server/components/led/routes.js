@@ -13,6 +13,7 @@ router.get('/display', function(req, res, next) {
 
 router.get('/', function(req, res, next) {
   res.json(hardware.get());
+  next();
 });
 
 /* POST Route

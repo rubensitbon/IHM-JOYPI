@@ -1,5 +1,9 @@
 var express = require('express');
 const customAuthMiddleware = require('./middleware/custom-auth-middleware');
+const {
+  IFTTTReqMiddleware,
+  IFTTTResMiddleware
+} = require('./middleware/IFTTT-middleware');
 const bodyParser = require('body-parser');
 var path = require('path');
 var dotenv = require('dotenv').config({ path: path.join(__dirname, '.env') });
@@ -28,6 +32,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(customAuthMiddleware);
+app.use(IFTTTReqMiddleware);
 app.use(express.static(path.join(__dirname, 'public')));
 app.engine('html', require('ejs').renderFile);
 
@@ -57,5 +62,7 @@ getDirectories('./components').forEach(component => {
   });
   return;
 });
+
+app.use(IFTTTResMiddleware);
 
 module.exports = app;
