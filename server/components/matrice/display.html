@@ -1,0 +1,48 @@
+<div>
+  <div style="color: blue;">
+    LED MATRIX
+  
+  <button
+    id="submit-button"
+    type="button"
+    onclick="fetch('http://localhost:9000/api/matrice', {
+      method: 'POST',
+      headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({emojis: 'smile.py'})
+    })"
+  >
+    SMILE
+  </button>
+
+  <button
+    id="submit-button"
+    type="button"
+    onclick="fetch('http://localhost:9000/api/matrice', {
+      method: 'POST',
+      headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({emojis: 'sad.py'})
+    })"
+  >
+    SAD
+  </button>
+  <button
+    id="submit-button"
+    type="button"
+    onclick="fetch('http://localhost:9000/api/matrice', {
+      method: 'POST',
+      headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({emojis: 'coeur.py})
+    })"
+  >
+    COEUR
+  </button>
+</div>
