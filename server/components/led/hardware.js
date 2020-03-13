@@ -1,6 +1,6 @@
 // Function to get values from the board (get the output)
 function get() {
-  return 1;
+  return 'PROUT';
 }
 
 // Function to interact with Input values of the board

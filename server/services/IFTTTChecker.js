@@ -16,9 +16,14 @@ function check({ name, label, value }) {
       .filter({ IF: { name, label, value } })
       .value();
 
-    if (posts) {
+    if (posts.lenght > 0) {
       console.log('YA QQCHOSE post', posts);
-      posts.forEach(post => console.log('Action à faire : THEN', post.THEN));
+
+      posts.forEach(post => {
+        console.log('Action à faire : THEN', post.THEN);
+        var hardware = require(`../components/${post.THEN.name}/hardware`);
+        hardware.post(post.THEN.value);
+      });
     }
   });
 }
