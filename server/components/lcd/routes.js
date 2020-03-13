@@ -18,9 +18,9 @@ router.get('/', function(req, res, next) {
 /* POST Route
 ========================================================= */
 router.post('/', async (req, res) => {
-  const { ligne1, ligne2 } = req.body;
+  const { ligne1, ligne2, on_off } = req.body;
 
-  res.json(hardware.post(ligne1, ligne2));
+  res.json(hardware.post(ligne1, ligne2, on_off));
 });
 
 module.exports = router;

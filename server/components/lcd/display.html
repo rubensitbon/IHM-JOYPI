@@ -25,9 +25,23 @@
       'Accept': 'application/json',
       'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ligne1: document.getElementById('ligne1').value, ligne2: document.getElementById('ligne2').value})
+      body: JSON.stringify({ligne1: document.getElementById('ligne1').value, ligne2: document.getElementById('ligne2').value, on_off: '0'})
     })"
   >
     Envoyer
+  </button>
+  <button
+    id="submit-button"
+    type="button"
+    onclick="fetch('http://localhost:9000/api/lcd', {
+      method: 'POST',
+      headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ligne1: 'lala', ligne2: 'lala', on_off: '1'})
+    })"
+  >
+    Eteindre Ecran
   </button>
 </div>

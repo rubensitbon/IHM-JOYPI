@@ -4,14 +4,16 @@ function get() {
 }
 
 // Function to interact with Input values of the board
-function post(ligne1, ligne2) {
+function post(ligne1, ligne2, on_off) {
   var { PythonShell } = require('python-shell');
+  var path = require('path');
 
   var command = 'open1';
   var comport = 6;
 
   let options = {
-    args: [ligne1, ligne2]
+    scriptPath: __dirname,
+    args: [ligne1, ligne2, on_off]
   };
 
   PythonShell.run('hardware.py', options, function(err) {

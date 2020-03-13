@@ -14,21 +14,23 @@ lcd = character_lcd.Character_LCD_I2C(i2c, lcd_columns, lcd_rows)
 
 try:
 
-	if(len(sys.argv)>2):
+	if(len(sys.argv)>3):
 
-		lcd.backlight = True
+		if(sys.argv[3] == '0'):
 
-		lcd.clear()
+			lcd.backlight = True
 
-		ligne1 = sys.argv[1][0:16]
-		ligne2 = sys.argv[2][0:16]
+			lcd.clear()
 
-		lcd.message = ligne1+"\n"+ligne2
+			ligne1 = sys.argv[1][0:16]
+			ligne2 = sys.argv[2][0:16]
 
-		time.sleep(5)
+			lcd.message = ligne1+"\n"+ligne2
 
-		lcd.clear()
-		lcd.backlight = False
+		else:
+
+			lcd.clear()
+			lcd.backlight = False
 
 	else:
 		print ('Pas assez d arguments')
