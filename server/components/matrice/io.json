@@ -1,0 +1,7 @@
+{
+  "name": "lcd",
+  "route": "/api/matrice/",
+  "gpioNeeded": true,
+  "in": [{ "label": "emojis", "type": "string", "method": "POST" }],
+  "out": []
+}
