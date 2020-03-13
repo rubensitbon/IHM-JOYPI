@@ -4,8 +4,9 @@ function get() {
 }
 
 // Function to interact with Input values of the board
-function post(ligne1, ligne2) {
+function post(ligne1, ligne2, on_off) {
   var { PythonShell } = require('python-shell');
+  var path = require('path');
 
   var command = 'open1';
   var comport = 6;
