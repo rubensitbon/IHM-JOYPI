@@ -1,0 +1,8 @@
+{
+  "name": "speaker",
+  "route": "/api/speaker/",
+  "gpioNeeded": true,
+  "pigpioNeeded": true,
+  "in": [{ "label": "state", "type": "boolean", "method": "POST" }],
+  "out": [{ "label": "state", "type": "boolean", "method": "GET" }]
+}
