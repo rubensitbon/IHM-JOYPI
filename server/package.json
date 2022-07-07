@@ -18,7 +18,7 @@
     "forever": "^1.0.0",
     "forever-monitor": "^1.7.1",
     "lowdb": "^1.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "nodemon": "^2.0.2",
     "pigpio": "^3.0.0",
     "python-shell": "^1.0.8"
